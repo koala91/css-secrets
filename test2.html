@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>第二章：背景与边框</title>
+	<style type="text/css">
+	.part{
+		background: #A7142E;
+	}
+		.nav{
+			border: 10px solid hsla(0,0%,100%,.5);
+			background:white;
+			background-clip: padding-box;
+			display: inline-block;
+		}
+		.public{
+			border: 5px dashed blue;
+			background: white;
+			display: inline-block;
+			background-clip: padding-box;
+			
+		}
+		.nec{
+			border: 5px dashed blue;
+			background: white;
+			display: inline-block;
+		}
+		.ddc{
+			border: 5px dashed blue;
+			background: white;
+			display: inline-block;
+			background-clip: content-box;
+		}
+		.a{
+			margin: 10px;
+			display: inline-block;
+			background: yellowgreen;
+			box-shadow: 0 0 0 10px #655;
+
+		}
+		.b{
+			display: inline-block;
+			background: #3421A7;
+			border: 10px solid #3421A7;
+			outline: 5px solid deeppink;
+			margin: 10px;
+		}
+		.c{
+			margin: 10px;
+			display: inline-block;
+			background: #3421A7;
+			border: 10px solid #3421A7;
+			outline-offset: -15px dashed deeppink;
+		}
+		.d{
+			margin: 10px;
+			padding: 10px;
+			width: 1200px;
+			height: 480px;
+			background: url(task1.jpg) no-repeat #58a bottom right ;
+			background-position: content-box;
+
+		}
+		.e{
+			margin: 10px;
+			padding: 10px;
+			width: 1200px;
+			height: 480px;
+			background: url(kaola.jpg) no-repeat #58a  ;
+			background-position: right 20px bottom 20px;
+			
+		}
+		.f{
+			margin: 10px;
+			
+			width: 1200px;
+			height: 480px;
+			background: url(kaola.jpg) no-repeat #58a  ;
+			background-position: calc(100% - 20px) calc(100% - 20px);
+			
+		}
+		.g{
+			background: #3421A7;
+			padding: 0.8em;
+		}
+		.g>div{
+			background: tan;
+			border-radius: 0.8em;
+			padding: 1em;
+		}
+		.h{
+			margin: 20px;
+			background: tan;
+			border-radius: 0.8em;
+			padding: 1em;
+			box-shadow: 0 0 0 0.6em #655;
+			outline: 0.6em solid #655;
+		}
+		.i{
+			margin: 20px;
+			background: tan;
+			border-radius: 0.8em;
+			padding: 1em;
+			box-shadow: 0 0 0 0.4em #655;
+			outline: 0.6em solid #655;
+		}
+		.j{
+			margin: 20px;
+			background: tan;
+			border-radius: 0.8em;
+			padding: 1em;
+			box-shadow: 0 0 0 0.4em #655;
+			
+		}
+		.k{
+
+			height: 60px;
+			background: linear-gradient(#fb3 50%,#58a 50%);
+			background-size: 50% 30px;
+		}
+		.l{
+			margin: 10px;
+			height: 60px;
+			background: linear-gradient(to right,#fb3 50%,#58a 50%);
+			background-size: 30px 50%;
+		}
+		.m{
+			height:60px;
+			background: repeating-linear-gradient(45deg, #fb3, #58a 30px)
+		}
+
+	</style>
+</head>
+<body>
+	<div class="part">
+		<div class="nav">
+		123456789
+	</div>
+	<div class="public">
+		123456789
+	</div>
+	<div class="nec">
+	123456789
+	</div>
+	
+	<div class="ddc">
+		123456789
+	</div>
+	</div>
+	
+	<div>123456789</div>
+	<div class="a">
+		123456789
+	</div>
+	<div class="b">
+		123456789
+	</div>
+	<div class="c">123456789</div>
+	<div class="d">123456789</div>
+	<div class="e">123456789</div>
+	<div class="f">123456789</div>
+	<div class="g"><div>123456789</div></div>
+	<div class="h">123456789</div>
+	<div class="i">123456789</div>
+	<div class="j">123456789</div>
+	<div class="k">123456789</div>
+	<div class="l">123456789</div>
+	<div class="m">123456789</div>
+	
+</body>
+</html>
