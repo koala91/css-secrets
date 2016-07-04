@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>第三章：形状</title>
+	<style type="text/css">
+		.a{
+			background: #fb3;
+			width: 200px;
+			height: 200px;
+			border-radius: 100px;
+			display: inline-block;
+		}
+		.b{
+			background: #fb3;
+			width: 200px;
+			height: 200px;
+			border-radius: 150px;
+			display: inline-block;
+		}
+		.c{
+			background: #fb3;
+			width: 200px;
+			height: 150px;
+			border-radius: 100px/75px;
+			display: inline-block;
+		}
+		.d{
+			background: #fb3;
+			width: 200px;
+			height: 300px;
+			border-radius: 100px/75px;
+			display: inline-block;
+		}
+		.e{
+			background: #fb3;
+			width: 300px;
+			height: 300px;
+			border-radius: 50%;
+			display: inline-block;
+		}
+		.f{
+			background: #fb3;
+			width: 300px;
+			height: 300px;
+			border-radius: 50%/100% 100% 0 0;
+			display: inline-block;
+		}
+		.g{
+			background: #fb3;
+			width: 300px;
+			height: 300px;
+			border-radius: 100% 0 0 100%/50%;
+			display: inline-block;
+		}
+		.h{
+			background: #fb3;
+			width: 300px;
+			height: 300px;
+			border-radius: 50%/0 0 100% 100%;
+			display: inline-block;
+		}
+		.i{
+			background: #fb3;
+			width: 300px;
+			height: 300px;
+			border-radius: 100% 0 0 100%/50%;
+			display: inline-block;
+		}
+		.j{
+			background: #fb3;
+			width: 300px;
+			height: 300px;
+			border-radius: 100% 0 0 0;
+			display: inline-block;
+		}
+		.k{
+			background: #fb3;
+			width: 300px;
+			height: 300px;
+			border-radius: 0 100% 0 0;
+			display: inline-block;
+		}
+		.l{
+			background: #fb3;
+			width: 300px;
+			height: 300px;
+			border-radius: 0 0 100% 0;
+			display: inline-block;
+		}
+		.m{
+			background: #fb3;
+			width: 300px;
+			height: 300px;
+			border-radius: 0 0 0 100%;
+			display: inline-block;
+		}
+		.n{
+			display: inline-block;
+			background: #fb3;
+			padding: 5px;
+			transform: skew(-45deg);
+		}
+		.o{
+			display: inline-block;
+			position: relative;
+			padding: 5px;
+			margin-left: 50px;
+		}
+		.o::before{
+			content: "";
+			position: absolute;
+			top: 0;right: 0;bottom: 0;left: 0;
+			z-index: -1;
+			background: #fb3;
+			transform: skew(45deg);
+		}
+		.p{
+			clip-path: polygon(50% 0,100% 50%,50% 100%,0 50%);
+			-webkit-clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);
+			-moz-clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);
+			-ms-clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);
+
+		}
+		.q{
+			clip-path: polygon(50% 0,100% 50%,50% 100%,0 50%);
+			-webkit-clip-path: polygon(50% 0,100% 50%,50% 100%,0 50%);
+			transition: 1s clip-path;
+		}
+		.q:hover{
+			clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+			-webkit-clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+		}
+		.r{
+			display: inline-block;
+			background: #fb3;
+			background:linear-gradient(-45deg,transparent 5px,#58a 0);
+			padding: 10px;
+		}
+		.s{
+			display: inline-block;
+			background: #fb3;
+			background:linear-gradient(-45deg,transparent 5px,#58a 0) right,
+			           linear-gradient(45deg,transparent 5px,#58a 0) left;
+			background-size: 50% 100%;
+			background-repeat: no-repeat;
+			padding: 10px;
+		}
+		.t{
+			display: inline-block;
+			background: #fb3;
+			background:linear-gradient(135deg,transparent 5px,#58a 0) top left,
+			           linear-gradient(-135deg,transparent 5px,#58a 0) top right,
+			           linear-gradient(-45deg,transparent 5px,#58a 0) bottom right,
+			           linear-gradient(45deg,transparent 5px,#58a 0) bottom left;
+			background-size: 50% 50%;
+			background-repeat: no-repeat;
+			padding: 10px;
+		}
+		.u{
+			display: inline-block;
+			background: #58a;
+			background:
+						radial-gradient(circle at top left,transparent 5px,#58a 0) top left,
+						radial-gradient(circle at top right,transparent 5px,#58a 0) top right,
+						radial-gradient(circle at bottom right,transparent 5px,#58a 0) bottom right,
+						radial-gradient(circle at bottom left,transparent 5px,#58a 0) bottom left;
+			background-size: 50% 50%;
+			background-repeat: no-repeat;
+			padding: 10px;
+		}
+		.v{
+			clip-path: polygon(
+				20px 0,calc(100% - 20px) 0 ,
+				100% 20px,100% calc(100% - 20px),
+				calc(100% - 20px) 100%,20px 100%,
+				0 calc(100% - 20px), 0 20px
+				);
+			-webkit-clip-path: polygon(
+				20px 0,calc(100% - 20px) 0 ,
+				100% 20px,100% calc(100% - 20px),
+				calc(100% - 20px) 100%,20px 100%,
+				0 calc(100% - 20px), 0 20px
+				);
+		}
+		.w{
+			display: inline-block;
+		}
+		.w a{
+			
+			position: relative;
+			display: inline-block;
+			padding: 0.3em 1em 0;
+			text-decoration: none;
+		}
+		.w a::before{
+			content: "";
+			position: absolute;
+			top: 0;right: 0;bottom:0;left: 0;
+			z-index: -1;
+			background: #ccc;
+			background-image: linear-gradient(hsla(0,0%,100%,0.6),hsla(0,0%,100%,0));
+			border:1px solid rgb(0,0,0,0.4);
+			border-bottom: none;
+			border-radius: 0.5em 0.5em 0 0;
+			box-shadow: 0 0.15em white inset;
+			transform: perspective(0.5em) rotateX(5deg);
+			transform-origin: bottom;
+		}
+		.w li{
+			float: left;
+		}
+		.w ul{
+			list-style: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="a"></div>
+	<div class="b"></div>
+	<div class="c"></div>
+	<div class="d"></div>
+	<div class="e"></div>
+	<div class="f"></div>
+	<div class="g"></div>
+	<div class="h"></div>
+	<div class="i"></div>
+	<div class="j"></div>
+	<div class="k"></div>
+	<div class="l"></div>
+	<div class="m"></div>
+	<div class="n">123456789</div>
+	<div class="o">123456789</div>
+	<img src="kaola.jpg" class="p">
+	<img src="kaola.jpg" alt="" class="q">
+	<div class="r">123456789</div>
+	<div class="s">123456789</div>
+	<div class="t">123456789</div>
+	<div class="u">123456789123456789123456789123456789123456789123456789123456789</div>
+	<img src="kaola.jpg" class="v">
+	<div class="w">
+		<ul>
+			<li><a href="">123456789</a></li>
+			<li><a href="">123456789</a></li>
+			<li><a href="">123456789</a></li>
+		</ul>
+	</div>
+</body>
+</html>
