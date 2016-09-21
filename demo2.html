@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            margin: 50px auto;
+            height: 100%;
+            width: 1080px;
+           display: table;
+            font-size: 0;
+        }
+        .nanjing{
+            position: relative;
+            display: inline-block;
+            font-size: 18px;
+            width: 200px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            margin-left: 80px;
+            margin-right: 80px;
+            cursor: pointer;
+        }
+        .nanjing::before,.nanjing::after{
+            position: absolute;
+            font-size: 50px;
+            top:0;
+            transition: all 0.3s ease-in 0s;
+        }
+        .nanjing::before{
+            content: "[";
+            left: -30px;
+        }
+        .nanjing::after{
+            content: "]";
+            right:-30px;
+        }
+        .nanjing:hover{
+            background: #eee;
+            opacity: 0.8;
+        }
+        .nanjing:hover::before{
+            left: 0;
+        }
+        .nanjing:hover::after{
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="nanjing">jsconf 2016 南京</div>
+        <div class="nanjing">jsconf 2016 南京</div>
+        <div class="nanjing">jsconf 2016 南京</div>
+        <div class="nanjing">jsconf 2016 南京</div>
+        <div class="nanjing">jsconf 2016 南京</div>
+        <div class="nanjing">jsconf 2016 南京</div>
+    </div>
+
+</body>
+</html>

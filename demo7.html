@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>滑动特效</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 990px;
+            margin: 50px auto;
+            height: 330px;
+            background: #cccccc;
+            padding: 5px;
+        }
+        .main{
+            position: relative;
+            float: left;
+            width: 320px;
+            height: 320px;
+            margin: 5px;
+            background: #fff;
+            overflow: hidden;
+        }
+        .xiaomi-left{
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .xiaomi-right{
+            position: absolute;
+            left: 320px;
+            top:0;
+        }
+        .main:hover .xiaomi-left{
+            position: absolute;
+            left: -320px;
+            top:0;
+            transition: all 0.5s ease 0s;
+        }
+        .main:hover .xiaomi-right{
+            position: absolute;
+            left: 0;
+            top:0;
+            transition: all 0.5s ease 0s;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="main">
+            <div class="xiaomi-left"><img src="img/d.png" alt=""></div>
+            <div class="xiaomi-right"><img src="img/d.png" alt=""></div>
+        </div>
+        <div class="main">
+            <div class="xiaomi-left"><img src="img/d.png" alt=""></div>
+            <div class="xiaomi-right"><img src="img/d.png" alt=""></div>
+        </div>
+        <div class="main">
+            <div class="xiaomi-left"><img src="img/d.png" alt=""></div>
+            <div class="xiaomi-right"><img src="img/d.png" alt=""></div>
+        </div>
+    </div>
+</body>
+</html>

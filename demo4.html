@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>阴影上移</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 960px;
+            font-size: 0;
+            margin: 50px auto;
+        }
+        .box img{
+            transition: all 0.3s ease 0s;
+        }
+        .box img:hover{
+            box-shadow: 0 0 10px #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="img/d.png" alt="">
+        <img src="img/d.png" alt="">
+        <img src="img/d.png" alt="">
+    </div>
+</body>
+</html>
